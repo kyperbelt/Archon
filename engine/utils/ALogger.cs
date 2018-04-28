@@ -8,7 +8,9 @@ namespace Archon.engine.utils
 {
     public interface ALogger
     { 
-        void log(String tag, String message);
+        //used for logging messages
+        void log(String message, String tag);
+        //used for logging 
         void err(String tag, String message);
         void debug(String tag, String message);
     }

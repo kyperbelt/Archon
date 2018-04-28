@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using Archon.engine.utils;
+using Archon.engine.graphics;
 
 namespace Archon.engine
 {
@@ -26,8 +27,9 @@ namespace Archon.engine
         }
 
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        ASpriteBatch spriteBatch;
         Texture2D texture;
+        TextureRegion region;
         private int c_width; //current width
         private int c_height; //current height
 
@@ -56,15 +58,18 @@ namespace Archon.engine
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new ASpriteBatch(GraphicsDevice);
 
-            var filePath = Path.Combine(Content.RootDirectory, "textures/WeinerCon.png");
+            var filePath = Path.Combine(Content.RootDirectory, "textures/Tjuanfront.png");
             var atlasPath = Path.Combine(Content.RootDirectory, "textures/game.atlas");
 
             using (var stream = TitleContainer.OpenStream(filePath))
             {
                 texture = Texture2D.FromStream(graphics.GraphicsDevice, stream);
             }
+
+
+            region = new TextureRegion(texture,20,20);
 
             string atlasText = null;
 
@@ -103,15 +108,31 @@ namespace Archon.engine
                 c_height = bheight;
                 c_width = bwidth;
                 archonResize(c_width, c_height);
+                GraphicsDevice.Viewport = new Viewport(0,0,c_width,c_height);
             }
         }
-        
+
+        float elapsed = 0;
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            spriteBatch.Begin();
-            spriteBatch.Draw(texture, new Vector2(0, 0), Color.White);
+            float delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            //elapased used to rotate region
+            elapsed += delta*100;
+            //test region scrolling
+            region.scroll(delta,delta);
+
+            float rwidth = 100;
+            float rheight = 100;
+            float rx = c_width / 2 - rwidth/2;
+            float ry = c_height / 2 - rheight/2;
+            
+
+            //set sampler state to point clamp to disable aa
+            spriteBatch.Begin(SpriteSortMode.Deferred,null,SamplerState.PointClamp);
+
+            spriteBatch.draw(region,rx,ry, rwidth,rheight,rwidth/2,rheight/2,2,2,MathHelper.ToRadians(elapsed),true);
             spriteBatch.End();
             // TODO: Add your drawing code here
 

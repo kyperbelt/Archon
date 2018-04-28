@@ -43,6 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="engine\ArchonGame.cs" />
+    <Compile Include="engine\graphics\ASpriteBatch.cs" />
     <Compile Include="engine\graphics\TextureRegion.cs" />
     <Compile Include="engine\utils\ALogger.cs" />
     <Compile Include="engine\utils\DesktopConsoleLogger.cs" />
