@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using System;
+
 using Archon.engine;
 
 namespace Archon
@@ -22,7 +24,7 @@ namespace Archon
 
         public override void archonResize(int width, int height)
         {
-            throw new System.NotImplementedException();
+            Log.log("Info:","window size changed [width:"+width+" height:"+height+"]");
         }
 
         public override void archonDraw(float delta)

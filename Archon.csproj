@@ -43,6 +43,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="engine\ArchonGame.cs" />
+    <Compile Include="engine\graphics\TextureRegion.cs" />
+    <Compile Include="engine\utils\ALogger.cs" />
+    <Compile Include="engine\utils\DesktopConsoleLogger.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +108,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <Content Include="assets\textures\game.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\sfx\" />
@@ -113,7 +119,6 @@
     <Folder Include="engine\map\" />
     <Folder Include="engine\math\" />
     <Folder Include="engine\scene\" />
-    <Folder Include="engine\utils\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\textures\Tjuanfront.png">

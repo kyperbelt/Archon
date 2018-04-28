@@ -1,0 +1,531 @@
+
+game.png
+size: 4096,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+26font3
+  rotate: false
+  xy: 2, 497
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+32font1
+  rotate: false
+  xy: 516, 497
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+32font2
+  rotate: false
+  xy: 1030, 497
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+32font4
+  rotate: false
+  xy: 1544, 497
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Beercon
+  rotate: false
+  xy: 1232, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+CardFront
+  rotate: false
+  xy: 2550, 799
+  size: 32, 48
+  orig: 32, 48
+  offset: 0, 0
+  index: -1
+CardN
+  rotate: false
+  xy: 3339, 961
+  size: 32, 48
+  orig: 32, 48
+  offset: 0, 0
+  index: -1
+Dadcon
+  rotate: false
+  xy: 3373, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Fartcon
+  rotate: false
+  xy: 1266, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+HbackHeckler
+  rotate: false
+  xy: 3407, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Heckler1
+  rotate: false
+  xy: 1300, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+HouseCon
+  rotate: false
+  xy: 2581, 854
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+King
+  rotate: false
+  xy: 2500, 799
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+KingsTower
+  rotate: false
+  xy: 2058, 486
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Momcon
+  rotate: false
+  xy: 3441, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Narizon
+  rotate: false
+  xy: 1334, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+NarizonIcon
+  rotate: false
+  xy: 3475, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+RibbonTest
+  rotate: false
+  xy: 1134, 463
+  size: 96, 32
+  orig: 96, 32
+  offset: 0, 0
+  index: -1
+Skullcon
+  rotate: false
+  xy: 1368, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Tjuan
+  rotate: false
+  xy: 3509, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Tjuanfront
+  rotate: false
+  xy: 1402, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+WeinerCon
+  rotate: false
+  xy: 3543, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+WizHeckler
+  rotate: false
+  xy: 1436, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+audicon
+  rotate: false
+  xy: 1634, 470
+  size: 28, 25
+  orig: 28, 25
+  offset: 0, 0
+  index: -1
+audicon_placeholder
+  rotate: false
+  xy: 3577, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+background0
+  rotate: false
+  xy: 2058, 552
+  size: 76, 78
+  orig: 76, 78
+  offset: 0, 0
+  index: -1
+background1
+  rotate: false
+  xy: 865, 409
+  size: 91, 86
+  orig: 91, 86
+  offset: 0, 0
+  index: -1
+background2
+  rotate: false
+  xy: 958, 421
+  size: 75, 74
+  orig: 75, 74
+  offset: 0, 0
+  index: -1
+build
+  rotate: false
+  xy: 1035, 462
+  size: 97, 33
+  orig: 97, 33
+  offset: 0, 0
+  index: -1
+build_down
+  rotate: false
+  xy: 2741, 976
+  size: 97, 33
+  orig: 97, 33
+  offset: 0, 0
+  index: -1
+choose
+  rotate: false
+  xy: 2223, 744
+  size: 136, 36
+  orig: 136, 36
+  offset: 0, 0
+  index: -1
+choose_down
+  rotate: false
+  xy: 2500, 920
+  size: 136, 36
+  orig: 136, 36
+  offset: 0, 0
+  index: -1
+colon
+  rotate: false
+  xy: 1470, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+comedy
+  rotate: false
+  xy: 2500, 958
+  size: 150, 51
+  orig: 150, 51
+  offset: 0, 0
+  index: -1
+croud_bg
+  rotate: false
+  xy: 2058, 829
+  size: 320, 180
+  orig: 320, 180
+  offset: 0, 0
+  index: -1
+deck_empty
+  rotate: false
+  xy: 631, 327
+  size: 40, 54
+  orig: 40, 54
+  offset: 0, 0
+  index: -1
+deck_full
+  rotate: false
+  xy: 2584, 798
+  size: 40, 54
+  orig: 40, 54
+  offset: 0, 0
+  index: -1
+deck_half
+  rotate: false
+  xy: 3297, 955
+  size: 40, 54
+  orig: 40, 54
+  offset: 0, 0
+  index: -1
+defjam
+  rotate: false
+  xy: 377, 383
+  size: 288, 112
+  orig: 288, 112
+  offset: 0, 0
+  index: -1
+end
+  rotate: false
+  xy: 542, 332
+  size: 87, 49
+  orig: 87, 49
+  offset: 0, 0
+  index: -1
+end_down
+  rotate: false
+  xy: 2652, 960
+  size: 87, 49
+  orig: 87, 49
+  offset: 0, 0
+  index: -1
+gameover
+  rotate: false
+  xy: 2, 218
+  size: 305, 106
+  orig: 305, 106
+  offset: 0, 0
+  index: -1
+hate
+  rotate: false
+  xy: 3611, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+heal
+  rotate: false
+  xy: 3121, 973
+  size: 86, 36
+  orig: 86, 36
+  offset: 0, 0
+  index: -1
+heal_down
+  rotate: false
+  xy: 3209, 973
+  size: 86, 36
+  orig: 86, 36
+  offset: 0, 0
+  index: -1
+heckleredition
+  rotate: false
+  xy: 2, 174
+  size: 263, 42
+  orig: 263, 42
+  offset: 0, 0
+  index: -1
+hpicon
+  rotate: false
+  xy: 3775, 984
+  size: 28, 25
+  orig: 28, 25
+  offset: 0, 0
+  index: -1
+hpicon_placeholder
+  rotate: false
+  xy: 1504, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+jester
+  rotate: false
+  xy: 267, 129
+  size: 48, 87
+  orig: 48, 87
+  offset: 0, 0
+  index: -1
+knight
+  rotate: false
+  xy: 2380, 805
+  size: 118, 204
+  orig: 118, 204
+  offset: 0, 0
+  index: -1
+left_arrow
+  rotate: false
+  xy: 2500, 849
+  size: 79, 69
+  orig: 79, 69
+  offset: 0, 0
+  index: -1
+left_arrow_down
+  rotate: false
+  xy: 186, 103
+  size: 79, 69
+  orig: 79, 69
+  offset: 0, 0
+  index: -1
+lootbox_0
+  rotate: false
+  xy: 3645, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+lootbox_1
+  rotate: false
+  xy: 1538, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+lootbox_2
+  rotate: false
+  xy: 3679, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+love
+  rotate: false
+  xy: 1572, 463
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+medieval
+  rotate: false
+  xy: 2, 326
+  size: 373, 169
+  orig: 373, 169
+  offset: 0, 0
+  index: -1
+menu
+  rotate: false
+  xy: 1035, 426
+  size: 95, 34
+  orig: 95, 34
+  offset: 0, 0
+  index: -1
+menu_down
+  rotate: false
+  xy: 2840, 975
+  size: 95, 34
+  orig: 95, 34
+  offset: 0, 0
+  index: -1
+mpicon
+  rotate: false
+  xy: 3713, 977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+oneliner_bonus
+  rotate: false
+  xy: 3747, 980
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+open
+  rotate: false
+  xy: 2937, 975
+  size: 90, 34
+  orig: 90, 34
+  offset: 0, 0
+  index: -1
+open_down
+  rotate: false
+  xy: 3029, 975
+  size: 90, 34
+  orig: 90, 34
+  offset: 0, 0
+  index: -1
+play
+  rotate: false
+  xy: 377, 331
+  size: 163, 50
+  orig: 163, 50
+  offset: 0, 0
+  index: -1
+play_down
+  rotate: false
+  xy: 2058, 730
+  size: 163, 50
+  orig: 163, 50
+  offset: 0, 0
+  index: -1
+playbutton
+  rotate: false
+  xy: 309, 244
+  size: 60, 80
+  orig: 60, 80
+  offset: 0, 0
+  index: -1
+playbutton_down
+  rotate: false
+  xy: 2156, 648
+  size: 60, 80
+  orig: 60, 80
+  offset: 0, 0
+  index: -1
+right_arrow
+  rotate: false
+  xy: 2, 2
+  size: 84, 72
+  orig: 84, 72
+  offset: 0, 0
+  index: -1
+right_arrow_down
+  rotate: false
+  xy: 100, 100
+  size: 84, 72
+  orig: 84, 72
+  offset: 0, 0
+  index: -1
+setup_bonus
+  rotate: false
+  xy: 1606, 463
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+shade1
+  rotate: false
+  xy: 309, 218
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+speech
+  rotate: false
+  xy: 2, 76
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+speech_rev
+  rotate: false
+  xy: 2058, 632
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+stage
+  rotate: false
+  xy: 2058, 782
+  size: 320, 45
+  orig: 320, 45
+  offset: 0, 0
+  index: -1
+victory
+  rotate: false
+  xy: 667, 409
+  size: 196, 86
+  orig: 196, 86
+  offset: 0, 0
+  index: -1
