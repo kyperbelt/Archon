@@ -44,9 +44,11 @@
   <ItemGroup>
     <Compile Include="engine\ArchonGame.cs" />
     <Compile Include="engine\graphics\ASpriteBatch.cs" />
+    <Compile Include="engine\graphics\TextureAtlas.cs" />
     <Compile Include="engine\graphics\TextureRegion.cs" />
     <Compile Include="engine\utils\ALogger.cs" />
     <Compile Include="engine\utils\DesktopConsoleLogger.cs" />
+    <Compile Include="engine\utils\FilePackage.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

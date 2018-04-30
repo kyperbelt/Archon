@@ -12,6 +12,8 @@ namespace Archon.engine
     public abstract class ArchonGame : Game
     {
 
+        public static readonly string ROOT_DIR = "assets";
+        public static GraphicsDeviceManager graphics;
         private static ALogger log;
         public static ALogger Log
         {
@@ -26,12 +28,13 @@ namespace Archon.engine
             }
         }
 
-        GraphicsDeviceManager graphics;
+        
         ASpriteBatch spriteBatch;
         Texture2D texture;
         TextureRegion region;
         private int c_width; //current width
         private int c_height; //current height
+        
 
         public ArchonGame(int width, int height)
         {
@@ -43,7 +46,8 @@ namespace Archon.engine
             this.c_width = width;
             this.c_height = height;
 
-            Content.RootDirectory = "assets";
+            //we set the content root dir in case we decide to use it for some reason down the line
+            Content.RootDirectory = ROOT_DIR;
         }
 
       
@@ -60,27 +64,19 @@ namespace Archon.engine
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new ASpriteBatch(GraphicsDevice);
 
-            var filePath = Path.Combine(Content.RootDirectory, "textures/Tjuanfront.png");
-            var atlasPath = Path.Combine(Content.RootDirectory, "textures/game.atlas");
+            var filePath = new FilePackage("textures/Tjuanfront.png");
+            var atlasPath = new FilePackage("textures/game.atlas");
 
-            using (var stream = TitleContainer.OpenStream(filePath))
-            {
-                texture = Texture2D.FromStream(graphics.GraphicsDevice, stream);
-            }
+
+
+            texture = filePath.asTexture();
 
 
             region = new TextureRegion(texture,20,20);
 
             string atlasText = null;
 
-            using (var stream = TitleContainer.OpenStream(atlasPath))
-            {
-                using (StreamReader reader = new StreamReader(stream, true))
-                {
-                    atlasText = reader.ReadToEnd();
-                }
-
-            }
+            atlasText = atlasPath.asString();
 
             Console.WriteLine(atlasText);
             // TODO: use this.Content to load your game content here
