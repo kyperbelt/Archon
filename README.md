@@ -1,7 +1,7 @@
 # Archon
 A X-Platform framework written in MonoGame to mirror the Libgdx asset pipeline. Making the creation of New games and the Porting of old games feel more intuitive.
 
-## Core Features  
+## Core Features 
  These are features that are required to expedite the development process.
  
  - **Input Event Handling**: monogame only offers state polling which is good for most cases but does not cover every case. 
@@ -16,6 +16,7 @@ A X-Platform framework written in MonoGame to mirror the Libgdx asset pipeline. 
  - **Specialized Pool Collections**: memory can be an issue, So to avoid genereating garbage we use pools to avoid object instantiation.
  - **Console UI**: for quickly prototyping levels and testing parameters on the fly from within the game. 
  - **Node Systems**: Being able to add logic to a node independently will allow re-use of the same code for other nodes.(nodes can be used as a sort of layering system). Node Systems are able to act on child nodes(of who the system belongs to) when they are added,removed or updated ect. An example of this could be a YSorting System that just sorts all the child nodes using their y coordinate. 
+ - **Asset Manager**: Used to make loading assets simple and prevent asset overloading. 
  
  ### Styling 
  
