@@ -13,6 +13,9 @@ namespace Archon.engine
     {
 
         public static readonly string ROOT_DIR = "assets";
+        public static int ScreenWidth { get; private set; }
+        public static int ScreenHeight { get; private set; }
+
         public static GraphicsDeviceManager graphics;
         private static ALogger log;
         public static ALogger Log
@@ -27,11 +30,10 @@ namespace Archon.engine
                 log = value;
             }
         }
+        private static ArchonGame self;
 
         
         ASpriteBatch spriteBatch;
-        Texture2D texture;
-        TextureRegion region;
         private int c_width; //current width
         private int c_height; //current height
         
@@ -45,6 +47,9 @@ namespace Archon.engine
             Window.AllowUserResizing = true;
             this.c_width = width;
             this.c_height = height;
+            ScreenWidth = width;
+            ScreenHeight = height;
+            self = this;
 
             //we set the content root dir in case we decide to use it for some reason down the line
             Content.RootDirectory = ROOT_DIR;
@@ -64,21 +69,7 @@ namespace Archon.engine
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new ASpriteBatch(GraphicsDevice);
 
-            var filePath = new FilePackage("textures/Tjuanfront.png");
-            var atlasPath = new FilePackage("textures/game.atlas");
-
-
-
-            texture = filePath.asTexture();
-
-
-            region = new TextureRegion(texture,20,20);
-
-            string atlasText = null;
-
-            atlasText = atlasPath.asString();
-
-            Console.WriteLine(atlasText);
+            archonCreate();
             // TODO: use this.Content to load your game content here
         }
 
@@ -94,6 +85,8 @@ namespace Archon.engine
                 Exit();
 
             // TODO: Add your update logic here
+            float delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            archonUpdate(delta);
 
             base.Update(gameTime);
 
@@ -103,37 +96,52 @@ namespace Archon.engine
             {
                 c_height = bheight;
                 c_width = bwidth;
+                ScreenWidth = c_width;
+                ScreenHeight = c_height;
                 archonResize(c_width, c_height);
                 GraphicsDevice.Viewport = new Viewport(0,0,c_width,c_height);
             }
         }
-
-        float elapsed = 0;
+        
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            float delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            //elapased used to rotate region
-            elapsed += delta*100;
-            //test region scrolling
-            region.scroll(delta,delta);
 
-            float rwidth = 100;
-            float rheight = 100;
-            float rx = c_width / 2 - rwidth/2;
-            float ry = c_height / 2 - rheight/2;
-            
-
-            //set sampler state to point clamp to disable aa
-            spriteBatch.Begin(SpriteSortMode.Deferred,null,SamplerState.PointClamp);
-
-            spriteBatch.draw(region,rx,ry, rwidth,rheight,rwidth/2,rheight/2,2,2,MathHelper.ToRadians(elapsed),true);
-            spriteBatch.End();
             // TODO: Add your drawing code here
+            float delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            archonDraw(spriteBatch, delta);
 
             base.Draw(gameTime);
         }
+
+        
+        //UTIL METHODS --------------------------------------------
+        //------------------------------------------------------------
+
+
+       
+        public static void writeLog(String tag, String message)
+        {
+            Log.log(tag,message);
+        }
+
+        public static void writeDebug(String tag, String message)
+        {
+            Log.debug(tag,message);
+        }
+
+        public static void writeError(String tag, String message)
+        {
+            Log.err(tag, message);
+        }
+
+        public static void exit()
+        {
+            self.Exit();
+        }
+
+        //OVERRIDES -----------------
 
         public virtual void archonPaused() { }
         public virtual void archonResumed() { }
@@ -150,8 +158,10 @@ namespace Archon.engine
         public abstract void archonResize(int width, int height);
         /**
          * archon rendering all logic and rendering is done in here
+         * for now using a singular spritebatch but can switch this out 
+         * if limitations arise
          */
-        public abstract void archonDraw(float delta);
+        public abstract void archonDraw(ASpriteBatch batch,float delta);
 
         /**
         *

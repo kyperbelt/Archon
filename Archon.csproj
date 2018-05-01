@@ -124,6 +124,9 @@
     <Folder Include="engine\scene\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\textures\game.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="assets\textures\Tjuanfront.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
