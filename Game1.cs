@@ -15,9 +15,9 @@ namespace Archon
 
         
         TextureAtlas atlas;
-        TextureRegion region;
+        TextureRegion[] region = new TextureRegion[3];
 
-        public Game1() : base(320,320){
+        public Game1() : base(1280,720){
         }
 
         public override void archonCreate()
@@ -27,7 +27,9 @@ namespace Archon
            
 
             atlas = new TextureAtlas(atlasPath);
-            region = atlas.findRegion("King");
+            region[0] = atlas.findRegion("King");
+            region[1] = atlas.findRegion("Tjuanfront");
+            region[2] = atlas.findRegion("CardFront");
             
         }
 
@@ -46,14 +48,16 @@ namespace Archon
 
             float rwidth = 100;
             float rheight = 100;
-            float rx = ScreenWidth / 2 - rwidth / 2;
+            float rx = ScreenWidth * .25f - rwidth / 2;
             float ry = ScreenHeight / 2 - rheight / 2;
 
 
             //set sampler state to point clamp to disable aa
             batch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-
-            batch.draw(region, rx, ry, rwidth, rheight, rwidth / 2, rheight / 2, 2, 2, MathHelper.ToRadians(elapsed));
+            for (int i = 0; i < region.Length; i++)
+            {
+                batch.draw(region[i], rx + (rwidth*3) * i + 20 * i, ry, rwidth, rheight, rwidth / 2, rheight / 2, 2, 2, MathHelper.ToRadians(elapsed));
+            }
             batch.End();
         }
 
